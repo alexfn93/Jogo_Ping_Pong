@@ -7,7 +7,7 @@
 
 <div>
 
-Link do website: <a href="jogo-ping-pong-gamma.vercel.app/">Ping-Pong Game</a>
+Link do website: <a href="https://jogo-ping-pong-gamma.vercel.app/">Ping-Pong Game</a>
 
 
 </div>
