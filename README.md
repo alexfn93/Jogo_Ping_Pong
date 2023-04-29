@@ -44,7 +44,7 @@ I implemented concepts de Object Oriented Programming, decision structure, opera
 <h3>Front-end</h3>
 
 <ul>
-    <li><b>Status: </b>Em progresso</li>
+    <li><b>Status: </b>OK</li>
     <li><b>Tecnologias | Technologies: </b>HTML, CSS and JavaScript.</li>
 </ul>
 
