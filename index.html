@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo Ping-Pong</title>
+    <style>
+      * {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      const canvasE1 = document.querySelector("canvas"),
+        canvasCtx = canvasE1.getContext("2d");
+        gapX = 10;
+
+      const lineWidth = 15;
+
+      //Objeto campo
+      const field = {
+        w: window.innerWidth,
+        h: window.innerHeight,
+        draw: function () {
+          canvasCtx.fillStyle = "#286047";
+          canvasCtx.fillRect(0, 0, this.w, this.h);
+        },
+      };
+
+      //Objeto linha
+      const line = {
+        w: 15,
+        h: field.h,
+        draw: function () {
+          canvasCtx.fillStyle = "#ffffff";
+          canvasCtx.fillRect(field.w / 2 - this.w / 2, 0, this.w, this.h);
+        },
+      };
+
+      //Objeto raquete esquerda
+      const leftPaddle = {
+        x: gapX,
+        y: 100,
+        w: line.w,
+        h: 200,
+        draw: function () {
+          canvasCtx.fillStyle = "#ffffff";
+          canvasCtx.fillRect(this.x, this.y, this.w, this.h);
+        },
+      };
+
+      //Objeto raquete direita
+      const rightPaddle = {
+        x: field.w - line.w - gapX,
+        y: 100,
+        w: line.w,
+        h: 200,
+        draw: function () {
+          canvasCtx.fillStyle = "#ffffff";
+          canvasCtx.fillRect(this.x, this.y, this.w, this.h);
+        },
+      };
+
+      //Objeto placar
+      const score = {
+        human: 1,
+        computer: 2,
+        draw: function () {
+          canvasCtx.fillStyle = "#ffffff";
+          canvasCtx.font = "bold 72px Arial";
+          canvasCtx.textAlign = "center";
+          canvasCtx.textBaseline = "top";
+          canvasCtx.fillStyle = "#01341D";
+          canvasCtx.fillText(this.human, field.w / 4, 50);
+          canvasCtx.fillText(this.computer,field.w / 4 + window.innerWidth / 2,50);
+        },
+      };
+
+      //Objeto bola
+      const ball = {
+        x: 500,
+        y: 200,
+        r: 20,
+        move: function () {
+          this.x +=
+        },
+        draw: function () {
+          canvasCtx.fillStyle = "#ffffff";
+          canvasCtx.beginPath();
+          canvasCtx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+          canvasCtx.fill();
+        },
+      };
+
+      function setup() {
+        canvasE1.width = canvasCtx.width = field.w;
+        canvasE1.height = canvasCtx.height = field.h;
+      }
+
+      function draw() {
+        // desenha o campo
+        field.draw();
+
+        // desenha linha central
+        line.draw();
+
+        // desenha a raquete esquerda
+        leftPaddle.draw();
+
+        // desenha a raquete direita
+        rightPaddle.draw();
+
+        // desenha a bolinha
+        ball.draw();
+
+        // desenha o placar
+        score.draw();
+      }
+
+      setup();
+      draw();
+
+      
+    </script>
+  </body>
+</html>
