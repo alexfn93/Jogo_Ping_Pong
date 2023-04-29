@@ -13,7 +13,7 @@ Link do website: <a href="jogo-ping-pong-gamma.vercel.app/">Ping-Pong Game</a>
 </div>
 > Status do Projeto | Project Status: :heavy_check_mark: :warning: Concluído | Concluded
 
-### Tópicos 
+### Tópicos | Topics
 
 :small_blue_diamond: [Descrição do projeto | Project Description](#descrição-do-projeto)
 
