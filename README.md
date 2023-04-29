@@ -39,7 +39,7 @@ I implemented concepts de Object Oriented Programming, decision structure, opera
 :heavy_check_mark: Layout responsivos.  
 
 
-## Linguagens, dependências e libs utilizadas | Languages, dependencies and libs used :books:
+## Linguagens, dependências e libs utilizadas | Languages, dependencies and libs used: :books:
 
 <h3>Front-end</h3>
 
